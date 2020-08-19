@@ -13,7 +13,7 @@ const httpsOptions = {
     cert: fs.readFileSync(__dirname + '/cert.pem', "utf-8")
 }
 
-const server = https.createServer(httpsOptions,app);
+const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
     debug: true,
     path: '/myapp'
